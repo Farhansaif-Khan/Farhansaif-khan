@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Farhan Khan. Builds small things people use. Explains every line.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0f1f"/>
+      <stop offset="1" stop-color="#131c38"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0"/>
+      <stop offset="0.12" stop-color="#5eead4"/>
+      <stop offset="0.88" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <clipPath id="card"><rect width="1200" height="320" rx="26"/></clipPath>
+  </defs>
+  <style>
+    .name{font:800 78px 'Segoe UI',Inter,'Helvetica Neue',Arial,sans-serif;letter-spacing:-2.5px;fill:#f4f6fb}
+    .tag{font:500 21px ui-monospace,'Cascadia Code','SFMono-Regular',Menlo,Consolas,monospace;fill:#9aa6c7}
+    .small{font:600 13px ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;letter-spacing:2.4px;fill:#6f7ba0}
+    .sig{fill:none;stroke:url(#fade);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2100;stroke-dashoffset:2100;animation:draw 6s cubic-bezier(.6,0,.3,1) infinite}
+    .ghost{fill:none;stroke:#5eead4;stroke-opacity:.12;stroke-width:2;stroke-linejoin:round}
+    .dot{fill:#f87171;animation:blink 1.4s ease-in-out infinite}
+    .cursor{fill:#5eead4;animation:blink 1s steps(2,start) infinite}
+    @keyframes draw{0%{stroke-dashoffset:2100;opacity:1}60%{stroke-dashoffset:0;opacity:1}88%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+    @keyframes blink{50%{opacity:.15}}
+    @media (prefers-reduced-motion:reduce){.sig{animation:none;stroke-dashoffset:0}.dot,.cursor{animation:none}}
+  </style>
+  <g clip-path="url(#card)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+    <rect width="1200" height="320" fill="url(#grid)"/>
+    <circle cx="1040" cy="40" r="260" fill="#5eead4" fill-opacity="0.05"/>
+    <circle class="dot" cx="66" cy="57" r="5"/>
+    <text class="small" x="82" y="62">LIVE · SIGNAL STABLE-ISH</text>
+    <text class="small" x="1134" y="62" text-anchor="end">AURANGABAD, IN · CLASS OF 2028</text>
+    <text class="name" x="58" y="158">Farhan Khan</text>
+    <text class="tag" x="62" y="198">builds small things people use. explains every line.</text>
+    <rect class="cursor" x="726" y="180" width="11" height="22" rx="2"/>
+    <path id="p" class="ghost" d="M0 262H250l12-9 12 9h26l10-58 14 96 12-38h34l18-13 18 13H640l12-9 12 9h26l10-58 14 96 12-38h34l18-13 18 13H1010l12-9 12 9h26l10-58 14 96 12-38h34l18-13 18 13H1200"/>
+    <path class="sig" d="M0 262H250l12-9 12 9h26l10-58 14 96 12-38h34l18-13 18 13H640l12-9 12 9h26l10-58 14 96 12-38h34l18-13 18 13H1010l12-9 12 9h26l10-58 14 96 12-38h34l18-13 18 13H1200"/>
+  </g>
+</svg>
